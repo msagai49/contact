@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var app = express();
 
-
+const port = process.env.PORT || 8000;
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
@@ -141,5 +141,5 @@ app.post('/login', function (req, res) {
   });
 
   
-app.listen(3000);
+app.listen(port);
 console.log("Server running on port 3000");
